@@ -6,32 +6,26 @@ var request = require('request');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-    res.render('login', {title: 'Auth'});
-});
 
 router.get('/login', function(req, res, next) {
 
-    var username = req.query.username;
-    var passwd = req.query.passwd;
-    var domain = req.query.domain;
 
     var options = {
         url: 'http://hackathon.promise.com.tw/fileop/v1/metadata/',
         method: 'GET',
         headers: {
-            'User-Agent': username + '.User.Portal',
+            'User-Agent': req.session.header,
             'X-Auth-Token': req.session.token
         }
     };
-
     request(options, function (error, response, body) {
-        console.log(response);
+        res.send(response);
     });
 
 });
 
 router.post('/login', function (req, res, next) {
+
     var username = req.body.username;
     var passwd = req.body.passwd;
     var domain = req.body.domain;
@@ -73,6 +67,10 @@ router.post('/login', function (req, res, next) {
     request(options, function (error, response, body) {
         if (response.statusCode == 201) {
             req.session.token = response.headers["x-subject-token"];
+            req.session.user = req.body.username;
+            req.session.password = req.body.passwd;
+            req.session.header = req.body.username + '.User.Portal';
+            req.session.domain = req.body.domain;
             res.redirect('/');
         } else {
             res.send(response);
