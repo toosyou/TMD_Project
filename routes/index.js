@@ -15,7 +15,6 @@ var event = mongoose.model('event', Event);
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-
     event.find({}, function (err, result) {
         console.log(result);
     });
