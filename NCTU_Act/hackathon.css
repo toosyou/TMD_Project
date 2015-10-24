@@ -3,6 +3,10 @@
         font-family:Woodcutter;
         src: url(./Woodcutter.ttf);
 }
+@font-face{
+		font-family:Swistblnk;
+		src: url(./Swistblnk Banthers.ttf);
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,17 +54,69 @@ table {
 	display: inline-block;
 }
 /*-- Reset end--*/
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .Act-menu label, .Act-menu a {
+    padding: 24px 24px 24px 82px;
+    font-size: 1.9rem;
+  }
+  .Act-menu label::before {
+    left: 24px;
+  }
+  .Act-menu label::after {
+    left: 53px;
+  }
+  .Act-menu ul label,
+  .Act-menu ul a {
+    padding-left: 106px;
+  }
+  .Act-menu ul label::before {
+    left: 48px;
+  }
+  .Act-menu ul label::after,
+  .Act-menu ul a::after {
+    left: 77px;
+  }
+  .Act-menu ul ul label,
+  .Act-menu ul ul a {
+    padding-left: 130px;
+  }
+  .Act-menu ul ul label::before {
+    left: 72px;
+  }
+  .Act-menu ul ul label::after,
+  .Act-menu ul ul a::after {
+    left: 101px;
+  }
+  .Act-menu ul ul ul label,
+  .Act-menu ul ul ul a {
+    padding-left: 154px;
+  }
+  .Act-menu ul ul ul label::before {
+    left: 96px;
+  }
+  .Act-menu ul ul ul label::after,
+  .Act-menu ul ul ul a::after {
+    left: 125px;
+  }
+}
 
-
+@media(max-width:768px){
+	
 /*-- Header --*/
 .Header{
 	width: 100%;
-	height: 100px;
-	background-image: linear-gradient(90deg, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
-	background-image: -moz-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
-	background-image: -webkit-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
-	background-image: -o-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
-	background-image: -ms-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
+	height: 90px;
+	background: #EF9A9A;
+	/*background-image: linear-gradient(90deg, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -moz-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -webkit-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -o-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -ms-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);*/
 	z-index: 2;
 	box-shadow: 10px 10px 5px #888888;
 }
@@ -68,12 +124,13 @@ table {
 	padding-top: -20px;
 	padding-left: 20px; 
 	width: 350px;
-	border: 1px solid #847914;
-	
+	height: 90px;
+	font-size: 80px;
+	letter-spacing: 0.1px;
+	margin-top: -15px;
 }
 .Header_title p{
 	font-family: Woodcutter;
-	font-size: 95px;
 	color: aliceblue;
 }
 
@@ -83,12 +140,13 @@ table {
 .Content{
 	z-index: 1;
 	height: 100%;
+	background-image: url();
 	background-color: azure;
 }
 /*-- Left Content --*/
 .Left_Content{
 	position: absolute;
-	width: 20%;
+	width: 40%;
 	max-width: 300px;
 	height: 100%;
 	background-color: #4d5158;
@@ -126,11 +184,6 @@ h1 {
   font-size: 2.4rem;
   color: #507b55;
   font-weight: bold;
-}
-@media only screen and (min-width: 600px) {
-  h1 {
-    font-size: 3.2rem;
-  }
 }
 
 input {
@@ -281,50 +334,528 @@ Main Components
 .Act-menu ul ul ul a::after {
   left: 95px;
 }
-@media only screen and (min-width: 600px) {
-  .Act-menu label, .Act-menu a {
-    padding: 24px 24px 24px 82px;
-    font-size: 1.9rem;
-  }
-  .Act-menu label::before {
-    left: 24px;
-  }
-  .Act-menu label::after {
-    left: 53px;
-  }
-  .Act-menu ul label,
-  .Act-menu ul a {
-    padding-left: 106px;
-  }
-  .Act-menu ul label::before {
-    left: 48px;
-  }
-  .Act-menu ul label::after,
-  .Act-menu ul a::after {
-    left: 77px;
-  }
-  .Act-menu ul ul label,
-  .Act-menu ul ul a {
-    padding-left: 130px;
-  }
-  .Act-menu ul ul label::before {
-    left: 72px;
-  }
-  .Act-menu ul ul label::after,
-  .Act-menu ul ul a::after {
-    left: 101px;
-  }
-  .Act-menu ul ul ul label,
-  .Act-menu ul ul ul a {
-    padding-left: 154px;
-  }
-  .Act-menu ul ul ul label::before {
-    left: 96px;
-  }
-  .Act-menu ul ul ul label::after,
-  .Act-menu ul ul ul a::after {
-    left: 125px;
-  }
+.Act-menu.animated label::before {
+  /* this class is used if you're using jquery to animate the accordion */
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/*-- Left Content end --*/
+
+
+/*--- Right Content end --*/
+.Right_Content{
+	position: absolute;
+	width: 60%;
+	margin-left: 40%;
+	/*border: 3px solid red;*/
+	height: 100%;
+}
+
+/*--    Act_box ----*/
+.Act_box{
+    position: relative;
+    display: block;	
+	background: #fff;
+	border:1px solid black;
+	width:100%;
+	height: 100px;
+  	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	text-align: center;
+}
+.Box_container{
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s, color 3s;	
+}
+.Act_box .Box_img {
+  width: 100px;
+  height: 100px;
+  z-index: 2px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.Act_box .Box_img img {
+  width: 90px;
+  height: 90px;
+  margin: 5px 0 0 5px;
+  z-index: 2px;
+}
+.Act_box h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  padding: 0;
+  color: #dd5555;
+}
+.Act_box p {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #7d7d7d;
+  padding: 0;
+}
+.Act_box button{
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #dd5555;
+  padding: 0 45px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+.Box_des{
+	border: 1px solid rgba(90, 86, 86, 0.5);
+	width: 150px;
+	height: 150px;
+	margin: 50 auto;
+	padding: 20px 10px 20px 10px;
+	border-radius: 3px;
+}
+.Box_info{
+	z-index:1px;
+	width: 200px;
+	height: 400px;
+}
+.Box_container:hover{
+	transform: translate3d(0,-95%,0);	
+}
+/*---    Act_Box end ---*/
+
+/*---    Login Form  ---*/
+.form {
+  background-color: #4d5158;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+          transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+/*.tab-content > div:last-child {
+  display: none;
+}*/
+
+.form h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px 20px;
+}
+
+.form label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+      -ms-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  top:8px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 18px;
+}
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+.form input,.form textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+          transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+.form textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  height: 50px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+
+
+/*---    Login Form end ---*/
+
+/*--- Login Button ---*/
+.Header_login{
+	position: absolute;
+	top:10px;
+	left: 75%;
+	height: 50px;
+}
+.Header_login button{
+  background: rgba(0,0,0,0);
+  color:#fff;
+  border:none;
+  height:50px;
+  weight:50px;
+  font-size:20px;
+  border-radius: 5px;
+  padding: 0 20px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.Header_login button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+/*.Header_login button:before,.Header_login button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.Header_login button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.Header_login button:hover:before,.Header_login button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}*/
+
+/*--- Login Button end ---*/
+}
+
+@media(min-width:769px){
+
+/*-- Header --*/
+.Header{
+	width: 100%;
+	height: 115px;
+	background: #EF9A9A;
+	/*background-image: linear-gradient(90deg, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -moz-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -webkit-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -o-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
+background-image: -ms-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);*/
+	z-index: 2;
+	box-shadow: 10px 10px 5px #888888;
+}
+.Header_title{
+	padding-top: -20px;
+	padding-left: 20px; 
+	width: 350px;
+	margin-top: -15px;
+}
+.Header_title p{
+	font-family: Woodcutter;
+	color: aliceblue;
+}
+
+/*--   Header end -----*/
+
+
+.Content{
+	z-index: 1;
+	height: 100%;
+	background-image: url();
+	background-color: azure;
+}
+/*-- Left Content --*/
+.Left_Content{
+	position: absolute;
+	width: 20%;
+	max-width: 300px;
+	height: 100%;
+	background-color: #4d5158;
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Jaldi", sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #a0f6aa;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  width: 90%;
+  margin: 2em auto 0;
+  font-size: 2.4rem;
+  color: #507b55;
+  font-weight: bold;
+}
+	
+input {
+  font-family: "Jaldi", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.Act-menu {
+  width: 100%;
+  max-height: 700px;
+  max-width: 300px;
+  background: #4d5158;
+  overflow: auto;
+}
+.Act-menu ul {
+  /* by default hide all sub menus */
+  display: none;
+}
+.Act-menu li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.Act-menu input[type=checkbox] {
+  /* hide native checkbox */
+  position: absolute;
+  opacity: 0;
+}
+.Act-menu label, .Act-menu a {
+  position: relative;
+  display: block;
+  padding: 18px 18px 18px 64px;
+  background: #4d5158;
+  box-shadow: inset 0 -1px #555960;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+.no-touch .Act-menu label:hover, .no-touch .Act-menu a:hover {
+  background: #52565d;
+}
+.Act-menu label::before, .Act-menu label::after, .Act-menu a::after {
+  /* icons */
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.Act-menu label {
+  cursor: pointer;
+}
+.Act-menu label::before, .Act-menu label::after {
+  background-image: url(./cd-icons.svg);
+  background-repeat: no-repeat;
+}
+.Act-menu label::before {
+  /* arrow icon */
+  left: 18px;
+  background-position: 0 0;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+.Act-menu label::after {
+  /* folder icons */
+  left: 41px;
+  background-position: -16px 0;
+}
+.Act-menu a::after {
+  /* image icon */
+  left: 36px;
+  background: url(./cd-icons.svg) no-repeat -48px 0;
+}
+.Act-menu input[type=checkbox]:checked + label::before {
+  /* rotate arrow */
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.Act-menu input[type=checkbox]:checked + label::after {
+  /* show open folder icon if item is checked */
+  background-position: -32px 0;
+}
+.Act-menu input[type=checkbox]:checked + label + ul,
+.Act-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+  /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
+  /* show children when item is checked */
+  display: block;
+}
+.Act-menu ul label,
+.Act-menu ul a {
+  background: #35383d;
+  box-shadow: inset 0 -1px #41444a;
+  padding-left: 82px;
+}
+.no-touch .Act-menu ul label:hover, .no-touch
+.Act-menu ul a:hover {
+  background: #3c3f45;
+}
+.Act-menu-menu > li:last-of-type > label,
+.Act-menu-menu > li:last-of-type > a,
+.Act-menu-menu > li > ul > li:last-of-type label,
+.Act-menu-menu > li > ul > li:last-of-type a {
+  box-shadow: none;
+}
+.Act-menu ul label::before {
+  left: 36px;
+}
+.Act-menu ul label::after,
+.Act-menu ul a::after {
+  left: 59px;
+}
+.Act-menu ul ul label,
+.Act-menu ul ul a {
+  padding-left: 100px;
+}
+.Act-menu ul ul label::before {
+  left: 54px;
+}
+.Act-menu ul ul label::after,
+.Act-menu ul ul a::after {
+  left: 77px;
+}
+.Act-menu ul ul ul label,
+.Act-menu ul ul ul a {
+  padding-left: 118px;
+}
+.Act-menu ul ul ul label::before {
+  left: 72px;
+}
+.Act-menu ul ul ul label::after,
+.Act-menu ul ul ul a::after {
+  left: 95px;
 }
 .Act-menu.animated label::before {
   /* this class is used if you're using jquery to animate the accordion */
@@ -347,6 +878,8 @@ Main Components
 
 /*--    Act_box ----*/
 .Act_box{
+    position: relative;
+    display: inline-block;	
 	background: #fff;
 	width: 200px;
 	height: 300px;
@@ -411,3 +944,211 @@ Main Components
 	transform: translate3d(0,-95%,0);	
 }
 /*---    Act_Box end ---*/
+
+/*---    Login Form  ---*/
+.form {
+  background-color: #4d5158;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+          transition: .5s ease;
+}
+.tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+.tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+/*.tab-content > div:last-child {
+  display: none;
+}*/
+
+.form h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px 20px;
+}
+
+.form label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+      -ms-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  top:8px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 18px;
+}
+label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #ffffff;
+}
+
+.form input,.form textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+          transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+.form textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  height: 50px;
+}
+
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+
+
+/*---    Login Form end ---*/
+
+/*--- Login Button ---*/
+.Header_login{
+	position: absolute;
+	top:20px;
+	left: 85%;
+	height: 60px;
+}
+.Header_login button{
+  background: rgba(0,0,0,0);
+  color:#fff;
+  border:none;
+  height:60px;
+  weight:50px;
+  font-size:25px;
+  border-radius: 5px;
+  padding: 0 20px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.Header_login button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+/*.Header_login button:before,.Header_login button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.Header_login button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.Header_login button:hover:before,.Header_login button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}*/
+
+/*--- Login Button end ---*/
+}

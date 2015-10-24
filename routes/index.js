@@ -2,8 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'NCTU Act' });
+router.get('/', function (req, res, next) {
+    res.render('index', {
+        title: 'NCTU Act',
+        token: req.session.token
+    });
 });
+
 
 module.exports = router;
