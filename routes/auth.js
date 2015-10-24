@@ -10,6 +10,27 @@ router.get('/', function (req, res, next) {
     res.render('login', {title: 'Auth'});
 });
 
+router.get('/login', function(req, res, next) {
+
+    var username = req.query.username;
+    var passwd = req.query.passwd;
+    var domain = req.query.domain;
+
+    var options = {
+        url: 'http://hackathon.promise.com.tw/fileop/v1/metadata/',
+        method: 'GET',
+        headers: {
+            'User-Agent': username + '.User.Portal',
+            'X-Auth-Token': req.session.token
+        }
+    };
+
+    request(options, function (error, response, body) {
+        console.log(response);
+    });
+
+});
+
 router.post('/login', function (req, res, next) {
     var username = req.body.username;
     var passwd = req.body.passwd;
@@ -40,20 +61,15 @@ router.post('/login', function (req, res, next) {
         }
     };
 
-    // Set the headers
-    var headers = {
-        'User-Agent': username + '.User.Portal'
-    };
-
-// Configure the request
     var options = {
         url: 'http://hackathon.promise.com.tw/keystone/v3/auth/tokens',
         method: 'POST',
-        headers: headers,
+        headers: {
+            'User-Agent': username + '.User.Portal'
+        },
         json: payload
     };
 
-// Start the request
     request(options, function (error, response, body) {
         if (response.statusCode == 201) {
             req.session.token = response.headers["x-subject-token"];
