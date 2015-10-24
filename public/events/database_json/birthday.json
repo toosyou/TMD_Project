@@ -1,0 +1,25 @@
+{
+	"name":"birthday",
+	"organiation":"NCTU",
+	"area":"Hsinchu",
+
+	"title":"幫蔡明娟慶生",
+	"date":"2016/02/12",
+	"time":"22:00~00:00",
+	"location":"交通大學工程三館",
+	"host":"交通大學資工系",
+	"price":"0",
+	"sponsor":"無",
+	"quota":"1000",
+	"detail":"記得國小時\n同學生日都會買乖乖桶來分大家吃嗎？\n就讓我們再回憶一次乖乖桶的童年吧！",
+
+	"tags":
+	[
+		{
+			"name":"celebrate"
+		},
+		{
+			"name":"birthday"
+		}
+	]
+}

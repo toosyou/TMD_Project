@@ -1,0 +1,32 @@
+{
+    "name":"CS",
+    "organization":"NCTU",
+    "area":"Hsinchu",
+    "country":"Taiwan",
+
+
+	"title":"CS爆頭大賽",
+	"date":"2015/11/14",
+	"time":"19:00~21:00",
+	"location":"交通大學工程三館",
+	"host":"交通大學資工系",
+	"price":"100",
+	"sponsor":"無",
+	"quota":"100",
+	"detail":"這些年，我們沒事就齊聚在宿舍一同打電動\nCS成了我們之間溝通的工具\n如今，我們終將一展長才\n讓其他人大開眼界了！",
+
+	"tags":
+	[
+		{
+			"name":"CS"
+		},
+		{
+			"name":"bloody"
+		},
+		{
+			"name":"competition"
+		}
+		
+		
+	]
+}

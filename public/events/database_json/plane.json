@@ -1,0 +1,33 @@
+{
+    "name":"plane",
+    "organization":"NCTU",
+    "area":"Hsinchu",
+    "country":"Taiwan",
+
+
+	"title":"紙飛機大賽",
+	"date":"2016/1/18",
+	"time":"12:00~13:00",
+	"location":"交通大學田徑場",
+	"host":"交通大學電子物理系",
+	"price":"100",
+	"sponsor":"無",
+	"quota":"80",
+	"detail":"那些年，我們一起在草原上奔跑\n一起摺紙飛機\n一起擲向遠方\n就讓我們來回溯這段美好的童年吧！",
+
+	"tags":
+	[
+		{
+			"name":"plane"
+		},
+		{
+			"name":"competition"
+		},
+		{
+			"name":"childhood"
+		}
+		
+		
+	]
+
+}

@@ -1,0 +1,33 @@
+{
+    "name":"bicycle",
+    "organization":"",
+    "area":"Kaoshiung",
+    "country":"Taiwan",
+
+	"title":"鐵馬單車兩日行",
+	"date":"2015/11/26~2015/11/27",
+	"time":"10:00集合",
+	"location":"台中火車站",
+	"host":"逢甲大學單將於台中車站集合，晚上於台南過夜，車社",
+	"price":"2000",
+	"sponsor":"捷安特股份有限公司",
+	"quota":"40",
+	"detail":"為了讓愛好自行車的朋友們能認識更多同好\n我們決定於十一月底舉辦一趟兩日遊的行程\n希望大家能以單車會友~\n名額有限，欲報名者請立即加入我們！！",
+
+	"tags":
+	[
+		{
+			"name":"bicycle"
+		},
+		{
+			"name":"trip"
+		},
+		{
+			"name":"travel"
+		},
+		{
+			"name":"two-day"
+		}
+		
+	]
+}
