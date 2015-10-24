@@ -1,0 +1,32 @@
+{
+    "name":"cosmetics",
+    "organization":"NCTU",
+    "area":"Hsinchu",
+    "country":"Taiwan",
+
+    "img_scr":"http://i.imgur.com/GcAQ0A5.jpg",
+
+	"title":"變臉大賽",
+	"date":"2016/2/27",
+	"time":"19:00~24:00",
+	"location":"交通大學活動中心二樓",
+	"host":"交通大學彩妝與保養社",
+	"price":"50",
+	"sponsor":"無",
+	"quota":"60",
+	"detail":"想要與大家交流化妝的經驗嗎？\n就讓我們在這一天一起著妝出來聊天交朋友吧！\n現場備有零嘴與飲料供大家享用歐~~",
+
+	"tags":
+	[
+		{
+			"name":"cosmetics"
+		},
+		{
+			"name":"competition"
+		},
+		{
+			"name":"beauty"
+		}
+		
+	]
+}

@@ -1,0 +1,28 @@
+{
+    "name":"hand_ring",
+    "organization":"NCTU",
+    "area":"Hsinchu",
+    "country":"Taiwan",
+
+    "img_scr":"http://i.imgur.com/mI5kzfk.jpg",
+
+	"title":"編織回憶",
+	"date":"2015/12/23",
+	"time":"9:00~21:00",
+	"location":"交通大學浩然廣場",
+	"host":"交通大學聖誕節籌備大會",
+	"price":"500",
+	"sponsor":"巨城百貨公司",
+	"quota":"500",
+    "detail":"想要與你的朋友、情人過一個浪漫的耶誕節嗎？\n歡迎大家一起來編織屬於你們的手環\n現場準備各色的材料\n歡迎共襄盛舉^^",
+
+	"tags":
+	[
+		{
+			"name":"ring"
+		},
+		{
+			"name":"hand-made"
+		}
+	]
+}

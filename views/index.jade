@@ -2,26 +2,50 @@ extends layout
 
 block content
     .Content
-        .Left_Content
+        .Left_Content.box
             ul.Act-menu.animated
-                if path
-                    each p in path
-                        li.has-children
-                            input(type='checkbox',name='#{p.path.replace("/","")}', id='#{p.path.replace("/","")}')
-                            label(for='#{p.path.replace("/","")}')= p.path.replace("/","")
+                each p in struct.countries
+                    li.has-children
+                        input(type='checkbox', name='#{p.name}',id='#{p.name}')
+                        label(for='#{p.name}')= p.name
+                        if p.areas.length != 0
+                            ul
+                                each a in p.areas
+                                    li.has-children(onclick='filter(areas,#{a.name})')
+                                        input(type='checkbox', name='#{a.name}',id='#{a.name}')
+                                        label(for='#{a.name}')= a.name
+                                        if a.organizations.length != 0
+                                            ul
+                                                each o in a.organizations
+                                                    li(onclick='filter(orgs,#{o.name})')
+                                                        input(type='checkbox', name='#{o.name}',id='#{o.name}')
+                                                        label(for='#{o.name}')= o.name
 
-        .Right_Content
-            .Act_box
-                .Box_container
-                    .Box_img
-                        img.box_img(src='/images/imgres.jpg')
-                    .Box_info
-                        h3 約跑
-                        p  2015/10/25
-                        p  新竹市，東區
-                        .Box_des
-                            p= token
-                        a.button.button-block(href="/auth/login") 看全部你媽媽旦旦麵
+                if login
+                    .Up_date
+                        button.up_date_btn Update
+            script.
+                function filter(key, value) {
+                    console.log(key, value);
+                }
+
+        .Right_Content.box
+            each d in data
+                .Act_box
+                    .Box_container
+                        .Box_img
+                            if d.img_scr
+                                img.box_img(src='#{d.img_scr}')
+                            else
+                                img.box_img(src='/images/Unknown.jpeg')
+                        .Box_info
+                            h3= d.title
+                            p= d.date
+                            p= d.location
+                            p= d.host
+                            .Box_des
+                                p= d.detail
+                            button= d.price
 
 
 

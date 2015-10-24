@@ -1,0 +1,34 @@
+{
+    "name":"cosmetics",
+    "organization":"NCTU",
+    "area":"Hsinchu",
+    "country":"Taiwan",
+
+    "img_scr":"http://i.imgur.com/61Gphwr.jpg",
+
+	"title":"拜訪內灣客家村落",
+	"date":"2015/11/28",
+	"time":"10:00~18:00",
+	"location":"交通大學北大門集合",
+	"host":"交通大學 創業領袖學程",
+	"price":"0",
+	"sponsor":"文化部",
+	"quota":"50",
+	"detail":"想要和我們一同前往內灣探索50年代的客家村落嗎？\n想要一探客家人文風情嗎？\n我們期待你的加入歐：)",
+	
+	"tags":
+	[
+		{
+			"name":"Hakka"
+		},
+		{
+			"name":"culture"
+		},
+		{
+			"name":"travel"
+		}
+		
+		
+	]
+
+}

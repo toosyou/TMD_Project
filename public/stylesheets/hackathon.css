@@ -152,10 +152,10 @@ table {
         height: 100%;
         background-color: #4d5158;
     }
-    /* --------------------------------
-
+    /* -------------------------------- 
+    
     Primary style
-
+    
     -------------------------------- */
     *, *::after, *::before {
         box-sizing: border-box;
@@ -192,14 +192,14 @@ table {
         font-size: 1.6rem;
     }
 
-    /* --------------------------------
-
-    Main Components
-
+    /* -------------------------------- 
+    
+    Main Components 
+    
     -------------------------------- */
     .Act-menu {
         width: 100%;
-        max-height: 700px;
+        height: 700px;
         max-width: 300px;
         background: #4d5158;
         overflow: auto;
@@ -635,7 +635,6 @@ table {
 }
 
 @media(min-width:769px){
-
     /*-- Header --*/
     .Header{
         width: 100%;
@@ -678,10 +677,10 @@ table {
         height: 100%;
         background-color: #4d5158;
     }
-    /* --------------------------------
-
+    /* -------------------------------- 
+    
     Primary style
-
+    
     -------------------------------- */
     *, *::after, *::before {
         box-sizing: border-box;
@@ -718,10 +717,10 @@ table {
         font-size: 1.6rem;
     }
 
-    /* --------------------------------
-
-    Main Components
-
+    /* -------------------------------- 
+    
+    Main Components 
+    
     -------------------------------- */
     .Act-menu {
         width: 100%;
@@ -945,23 +944,83 @@ table {
         height: 400px;
     }
     .Box_container:hover{
-        transform: translate3d(0,-95%,0);
+        transform: translate3d(0,-100%,0);
     }
     /*---    Act_Box end ---*/
 
     /*---    Login Form  ---*/
-    .form {
+    .Form_content{
+        display:none;
+        z-index:3px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(52, 54, 66, 0.8);
+        overflow-y: auto;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
+        -moz-transition: opacity 0.3s 0, visibility 0 0.3s;
+        transition: opacity 0.3s 0, visibility 0 0.3s;
+    }
+    .Form_content.is-visible {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: opacity 0.3s 0, visibility 0 0;
+        -moz-transition: opacity 0.3s 0, visibility 0 0;
+        transition: opacity 0.3s 0, visibility 0 0;
+    }
+    .Form {
         position: absolute;
-        left: 40%;
-        top:200px;
+        left: 35%;
+        top:70px;
         background-color: #4d5158;
         padding: 40px;
-        max-width: 600px;
-        margin: 40px auto;
+        width: 400px;
+        margin: 0px auto;
         border-radius: 4px;
         box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
     }
 
+    .Up_content{
+        display:none;
+        z-index:5px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(52, 54, 66, 0.8);
+        overflow-y: auto;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
+        -moz-transition: opacity 0.3s 0, visibility 0 0.3s;
+        transition: opacity 0.3s 0, visibility 0 0.3s;
+    }
+    .Up_content.is-visible {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: opacity 0.3s 0, visibility 0 0;
+        -moz-transition: opacity 0.3s 0, visibility 0 0;
+        transition: opacity 0.3s 0, visibility 0 0;
+    }
+    .Up_Form{
+        position: absolute;
+        left: 35%;
+        top:30px;
+        background-color: #4d5158;
+        padding: 40px;
+        width: 600px;
+        margin: 20px auto;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+
+    }
     .tab-group {
         list-style: none;
         padding: 0;
@@ -1069,7 +1128,11 @@ table {
         margin-bottom: 40px;
         height: 50px;
     }
-
+    .field-warptext{
+        position: relative;
+        margin-bottom: 40px;
+        height: 100px;
+    }
     .top-row:after {
         content: "";
         display: table;
@@ -1091,6 +1154,7 @@ table {
         padding: 15px 0;
         font-size: 1.5rem;
         font-weight: 600;
+        margin-top: 50px;
         text-transform: uppercase;
         letter-spacing: .1em;
         background: #1ab188;
@@ -1106,6 +1170,33 @@ table {
     .button-block {
         display: block;
         width: 100%;
+    }
+    .Form_close {
+        width: 36px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: #dd5555;
+        position:absolute;
+        right:3px;
+        top:4px;
+        cursor:pointer;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+    .close_con{
+        position: absolute;
+        height: 50px;
+        top: -5.5px;
+        left:7px;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Safari */
+        transform: rotate(45deg);
+    }
+    .close_con p{
+        color : aliceblue;
+        margin: 0;
+        padding: 0;
     }
     /*base code*/
     .Form_animated {
@@ -1182,3 +1273,29 @@ table {
     }
     /*--- Login Button end ---*/
 }
+/*--- UP-date ---*/
+.Up_date{
+    position: fixed;
+    top:80%;
+    left: 3%;
+    height: 60px;
+    z-index: 5px;
+}
+.Up_date button{
+    background: rgba(0,0,0,0);
+    color:#fff;
+    border:none;
+    height:60px;
+    weight:50px;
+    font-size:25px;
+    border-radius: 5px;
+    padding: 0 20px;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+.Up_date button:hover{
+    background:#fff;
+    color:#1AAB8A;
+}
+/*--- UP-date end---*/

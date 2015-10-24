@@ -1,0 +1,36 @@
+{
+    "name":"run",
+    "organization":"NCTU",
+    "area":"Hsinchu",
+    "country":"Taiwan",
+
+    "img_scr":"http://i.imgur.com/aoj74ki.jpg",
+
+	"title":"約跑活動",
+	"date":"2015/10/25",
+	"time":"19:00~24:00",
+	"location":"九舍322",
+	"host":"九舍322",
+	"price":"50",
+	"sponsor":"杜雷斯",
+	"quota":"20",
+    "detail":"健康身心，一起來約跑吧：目",
+
+	"tags":
+	[
+		{
+			"name":"jogging"
+		},
+		{
+			"name":"competition"
+		},
+		{
+			"name":"sports"
+		},
+		{
+			"name":"exercise"
+		}
+		
+		
+	]
+}

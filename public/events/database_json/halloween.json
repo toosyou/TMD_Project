@@ -1,0 +1,32 @@
+{
+    "name":"halloween",
+    "organization":"",
+    "area":"Taipei",
+    "country":"Taiwan",
+
+    "img_scr":"http://i.imgur.com/AK4i0ip.jpg",
+
+	"title":"萬聖節嘉年華",
+	"date":"2015/10/31",
+	"time":"19:00~24:00",
+	"location":"大安森林公園",
+	"host":"輔仁大學",
+	"price":"0",
+	"sponsor":"可口可樂股份有限公司",
+	"quota":"100",
+	"detail":"記得年幼時我們穿著妖怪裝一起上街trick or treat嗎？\n就讓我們再回味一次童年的時光吧！",
+
+	"tags":
+	[
+		{
+			"name":"halloween"
+		},
+		{
+			"name":"party"
+		},
+		{
+			"name":"festival"
+		}
+		
+	]
+}

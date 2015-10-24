@@ -1,0 +1,32 @@
+{
+    "name":"stomach",
+    "organization":"",
+    "area":"Kaoshiung",
+    "country":"Taiwan",
+
+    "img_scr":"http://i.imgur.com/auQrsQE.jpg",
+
+	"title":"I have a BIG STOMACH",
+	"date":"2016/6/30",
+	"time":"12:00~14:00",
+	"location":"日本東京市政府",
+	"host":"一番拉麵店",
+	"price":"500",
+	"sponsor":"高雄愛河畔",
+	"quota":"80",
+	"detail":"你的胃像無底洞嗎？\n朋友都說你很會吃\n敢和大家PK嗎？\n我們等你來！",
+
+	"tags":
+	[
+		{
+			"name":"challenge"
+		},
+		{
+			"name":"competition"
+		},
+		{
+			"name":"speed"
+		}
+		
+	]
+}
