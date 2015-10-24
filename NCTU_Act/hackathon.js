@@ -43,6 +43,8 @@ jQuery(document).ready(function(){
 $('.Header_login').click(function(){
 	  // the animation starts
    console.log("yo");
+  $('.Form_content').css('display', 'block');
+  $('.Form_content').toggleClass('.is-visible');
   $('.form').css('display','block');
   $('.form').toggleClass('fadeInUp Form_animated');
 
@@ -56,7 +58,7 @@ $('.Header_login').click(function(){
 });
 
 $('.Form_close').click(function(){
-	$('.Form').css('display','none');
+	$('.Form_content').css('display','none');
 });
 
 });
