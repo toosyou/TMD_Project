@@ -11,20 +11,23 @@ block content
                         if p.areas.length != 0
                             ul
                                 each a in p.areas
-                                    li.has-children
+                                    li.has-children(onclick='filter(areas,#{a.name})')
                                         input(type='checkbox', name='#{a.name}',id='#{a.name}')
                                         label(for='#{a.name}')= a.name
                                         if a.organizations.length != 0
                                             ul
                                                 each o in a.organizations
-                                                    li
+                                                    li(onclick='filter(orgs,#{o.name})')
                                                         input(type='checkbox', name='#{o.name}',id='#{o.name}')
                                                         label(for='#{o.name}')= o.name
 
                 if login
                     .Up_date
                         button.up_date_btn Update
-
+            script.
+                function filter(key, value) {
+                    console.log(key, value);
+                }
 
         .Right_Content.box
             each d in data

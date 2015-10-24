@@ -88,5 +88,13 @@ router.get('/', function (req, res, next) {
     });
 });
 
+router.get('/:filter', function (req, res, next) {
+    console.log(req.params);
+    event.find({}).limit(8).exec(function (err, result) {
+        res.send(result);
+    });
+});
+
+
 
 module.exports = router;
