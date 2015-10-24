@@ -13,9 +13,32 @@ html
             .Header_title
                 p NCTU Act!
             .Header_login
-                button() Fuck
+                button() Login
 
         block content
 
         .footer
+            form.form(style='display:none',action='/auth/login',method='post')
+                .tab-content
+                    #signup
+                        h1 登入
+                        .field-wrap
+                            label Domain
+                                span.req *
+                            input(type="text",required autocomplete="off",name='domain')
+
+                        .field-wrap
+                            label Username
+                                span.req *
+                            input(type="text",required autocomplete="off",name='username')
+                        .field-wrap
+                            label Password
+                                span.req *
+                            input(type="text",required autocomplete="off",name='passwd')
+
+                        button.button.button-block(type='submit') Login
+
+
+
+
         script(src='/javascripts/hackathon.js')
