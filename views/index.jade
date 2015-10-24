@@ -4,181 +4,45 @@ block content
     .Content
         .Left_Content.box
             ul.Act-menu.animated
-                li.has-children
-                    input#group-1(type='checkbox', name='group-1')
-                    label(for='group-1') 台灣
-                    ul
-                        li.has-children
-                            input#sub-group-1(type='checkbox', name='sub-group-1')
-                            label(for='sub-group-1') Sub Group 1
+                each p in struct.countries
+                    li.has-children
+                        input(type='checkbox', name='#{p.name}',id='#{p.name}')
+                        label(for='#{p.name}')= p.name
+                        if p.areas.length != 0
                             ul
-                                li
-                                    a(href='#0') Image
-                                li
-                                    a(href='#0') Image
-                                li
-                                    a(href='#0') Image
-                        li.has-children
-                            input#sub-group-2(type='checkbox', name='sub-group-2')
-                            label(for='sub-group-2') Sub Group 2
-                            ul
-                                li.has-children
-                                    input#sub-group-level-3(type='checkbox', name='sub-group-level-3')
-                                    label(for='sub-group-level-3') Sub Group Level 3
-                                    ul
-                                        li
-                                            a(href='#0') Image
-                                        li
-                                            a(href='#0') Image
-                                li
-                                    a(href='#0') Image
-                        li
-                            a(href='#0') Image
-                        li
-                            a(href='#0') Image
-                li.has-children
-                    input#group-2(type='checkbox', name='group-2')
-                    label(for='group-2') 日本
-                    ul
-                        li
-                            a(href='#0') Image
-                        li
-                            a(href='#0') Image
-                li.has-children
-                    input#group-3(type='checkbox', name='group-3')
-                    label(for='group-3') 加拿大
-                    ul
-                        li
-                            a(href='#0') Image
-                        li
-                            a(href='#0') Image
-                li.has-children
-                    input#group-4(type='checkbox', name='group-4')
-                    label(for='group-4') 北極
-                    ul
-                        li.has-children
-                            input#sub-group-3(type='checkbox', name='sub-group-3')
-                            label(for='sub-group-3') Sub Group 3
-                            ul
-                                li
-                                    a(href='#0') Image
-                                li
-                                    a(href='#0') Image
-                        li
-                            a(href='#0') Image
-                        li
-                            a(href='#0') Image
-            if login
-                .Up_date
-                    button.up_date_btn Update
+                                each a in p.areas
+                                    li.has-children
+                                        input(type='checkbox', name='#{a.name}',id='#{a.name}')
+                                        label(for='#{a.name}')= a.name
+                                        if a.organizations.length != 0
+                                            ul
+                                                each o in a.organizations
+                                                    li
+                                                        input(type='checkbox', name='#{o.name}',id='#{o.name}')
+                                                        label(for='#{o.name}')= o.name
+
+                if login
+                    .Up_date
+                        button.up_date_btn Update
+
+
         .Right_Content.box
-            .Act_box
-                .Box_container
-                    .Box_img
-                        img.box_img(src='/images/imgres.jpg')
-                    .Box_info
-                        h3 約"跑
-                        p  2015/10/25
-                        p  新竹市,東區
-                        .Box_des
-                            p
-                                | 幹我他們的
-                                br
-                                | 就是簡述啊
-                                br
-                                | 不會ＪＳ啊，幹想要去
-                                br
-                                | 吃麥當勞喔
-                        button 查看
-            .Act_box
-                .Box_container
-                    .Box_img
-                        img.box_img(src='/images/images.jpeg')
-                    .Box_info
-                        h3 約"跑
-                        p  2015/10/25
-                        p  新竹市,東區
-                        .Box_des
-                            p
-                                | 幹我他們的
-                                br
-                                | 就是簡述啊
-                                br
-                                | 不會ＪＳ啊，幹想要去
-                                br
-                                | 吃麥當勞喔
-                        button 查看
-            .Act_box
-                .Box_container
-                    .Box_img
-                        img.box_img(src='/images/imgres.jpg')
-                    .Box_info
-                        h3 約"跑
-                        p  2015/10/25
-                        p  新竹市,東區
-                        .Box_des
-                            p
-                                | 幹我他們的
-                                br
-                                | 就是簡述啊
-                                br
-                                | 不會ＪＳ啊，幹想要去
-                                br
-                                | 吃麥當勞喔
-                        button 查看
-            .Act_box
-                .Box_container
-                    .Box_img
-                        img.box_img(src='images/Unknown.jpeg')
-                    .Box_info
-                        h3 約"跑
-                        p  2015/10/25
-                        p  新竹市,東區
-                        .Box_des
-                            p
-                                | 幹我他們的
-                                br
-                                | 就是簡述啊
-                                br
-                                | 不會ＪＳ啊，幹想要去
-                                br
-                                | 吃麥當勞喔
-                        button 查看
-            .Act_box
-                .Box_container
-                    .Box_img
-                        img.box_img(src='/images/Unknown.jpeg')
-                    .Box_info
-                        h3 約"跑
-                        p  2015/10/25
-                        p  新竹市,東區
-                        .Box_des
-                            p
-                                | 幹我他們的
-                                br
-                                | 就是簡述啊
-                                br
-                                | 不會ＪＳ啊，幹想要去
-                                br
-                                | 吃麥當勞喔
-                        button 查看
-            .Act_box
-                .Box_container
-                    .Box_img
-                        img.box_img(src='/images/images.jpeg')
-                    .Box_info
-                        h3 約"跑
-                        p  2015/10/25
-                        p  新竹市,東區
-                        .Box_des
-                            p
-                                | 幹我他們的
-                                br
-                                | 就是簡述啊
-                                br
-                                | 不會ＪＳ啊，幹想要去
-                                br
-                                | 吃麥當勞喔
-                        button 查看
+            each d in data
+                .Act_box
+                    .Box_container
+                        .Box_img
+                            if d.img_scr
+                                img.box_img(src='#{d.img_scr}')
+                            else
+                                img.box_img(src='/images/Unknown.jpeg')
+                        .Box_info
+                            h3= d.title
+                            p= d.date
+                            p= d.location
+                            p= d.host
+                            .Box_des
+                                p= d.detail
+                            button= d.price
+
 
 

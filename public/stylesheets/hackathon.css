@@ -199,7 +199,7 @@ table {
     -------------------------------- */
     .Act-menu {
         width: 100%;
-        max-height: 700px;
+        height: 700px;
         max-width: 300px;
         background: #4d5158;
         overflow: auto;
@@ -944,7 +944,7 @@ table {
         height: 400px;
     }
     .Box_container:hover{
-        transform: translate3d(0,-95%,0);
+        transform: translate3d(0,-100%,0);
     }
     /*---    Act_Box end ---*/
 
