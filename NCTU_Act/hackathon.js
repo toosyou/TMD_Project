@@ -19,11 +19,7 @@ jQuery(document).ready(function(){
       label = $this.prev('label');
 
 	  if (e.type === 'focus') {
-		if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
+		  label.toggleClass('active highlight');
     } else if (e.type === 'blur') {
     	if( $this.val() === '' ) {
     		label.removeClass('active highlight'); 
@@ -40,21 +36,27 @@ jQuery(document).ready(function(){
     }
 
 });
-	// Tip: avoid this ton of code using AniJS ;)
-
-	$('.Header_login').click(function(){
-		  // the animation starts
-	   console.log("yo");
-	  $('.form').css('display','block');
-	  $('.form').toggleClass('fadeInUp Form_animated');
-
-	  // do something when animation ends
-	  $('.form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
-
-	   // trick to execute the animation again
-		$(e.target).removeClass('fadeInUp Form_animated');
-
-	  });   
-	});
 	
+//Form animation
+// Tip: avoid this ton of code using AniJS ;)
+
+$('.Header_login').click(function(){
+	  // the animation starts
+   console.log("yo");
+  $('.form').css('display','block');
+  $('.form').toggleClass('fadeInUp Form_animated');
+
+  // do something when animation ends
+  $('.form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+
+   // trick to execute the animation again
+	$(e.target).removeClass('fadeInUp Form_animated');
+
+  });   
+});
+
+$('.Form_close').click(function(){
+	$('.Form').css('display','none');
+});
+
 });

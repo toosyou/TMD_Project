@@ -953,7 +953,7 @@ Main Components
 .form {
   position: absolute;
   left: 40%;
-  top:200px;
+  top:150px;
   background-color: #4d5158;
   padding: 40px;
   max-width: 600px;
@@ -1107,6 +1107,33 @@ input:focus, textarea:focus {
   display: block;
   width: 100%;
 }
+.Form_close {
+	width: 36px;
+	height: 35px;
+	border-radius: 5px; 
+	background-color: #dd5555;
+	position:absolute;
+	right:3px;
+	top:4px;
+	cursor:pointer;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+}	
+.close_con{
+	position: absolute;
+	height: 50px;
+	top: -5.5px;
+	left:7px;
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari */
+		transform: rotate(45deg);
+}
+.close_con p{
+	color : aliceblue;
+	margin: 0;
+	padding: 0;
+}	
 /*base code*/
 .Form_animated {
   -webkit-animation-duration: 1s;
