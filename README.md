@@ -4,7 +4,9 @@
 
 蔡明娟 x 林立秦 x 簡聃 x 張逸群
 
-作品名字：International Activity Page
+我們不知道要衝三小＝口＝
+
+/*作品名字：International Activity Page
 
 多次找不到自己想要的活動嗎？
 
@@ -18,4 +20,4 @@ International Activity Page 網羅全世界的所有活動，
 
 International Activity Page 讓你抓到自己想要的活動，
 
-一起成為活動王吧！
+一起成為活動王吧！*/
