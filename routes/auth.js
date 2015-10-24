@@ -55,7 +55,12 @@ router.post('/login', function (req, res, next) {
 
 // Start the request
     request(options, function (error, response, body) {
-        res.send(response);
+        if (response.statusCode == 201) {
+            console.log(req.session);
+            res.redirect('/');
+        } else {
+            res.send(response);
+        }
     });
 
 });
