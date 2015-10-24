@@ -14,31 +14,83 @@ html
                 p NCTU Act!
             if !login
                 .Header_login
-                    button() Login
-
+                    button.Header_login_btn Login
+            else
+                a(href='/auth/logout') Logout
 
         block content
 
         .footer
-            form.form(style='display:none',action='/auth/login',method='post')
+        form.Form_content.is-visible(action='/auth/login',method='post')
+            .Form.form
                 .tab-content
                     #signup
                         h1 登入
+                        .Form_close
+                            .close_con
+                                p +
                         .field-wrap
                             label Domain
                                 span.req *
-                            input(type="text",required autocomplete="off",name='domain')
-
+                            input(type='text', required='', autocomplete='off',name='domain')
                         .field-wrap
                             label Username
                                 span.req *
-                            input(type="text",required autocomplete="off",name='username')
+                            input(type='text', required='', autocomplete='off',name='username')
                         .field-wrap
                             label Password
                                 span.req *
-                            input(type="text",required autocomplete="off",name='passwd')
-
+                            input(type='password', required='', autocomplete='off',name='password')
                         button.button.button-block(type='submit') Login
+
+        form.Up_content.is-visible
+            .Up.Form.form
+                .tab-content
+                    #signup
+                        h1 上傳
+                        .Form_close
+                            .close_con
+                                p +
+                        .field-wrap
+                            label Title
+                                span.req *
+                            input(type='text', required='', autocomplete='off')
+                        .top-row
+                            .field-wrap
+                                label
+                                    | Time
+                                    span.req *
+                                input(type='text', required='', autocomplete='off')
+                            .field-wrap
+                                label
+                                    | Date
+                                    span.req *
+                                input(type='text', required='', autocomplete='off')
+                        .top-row
+                            .field-wrap
+                                label
+                                    | Host
+                                    span.req *
+                                input(type='text', required='', autocomplete='off')
+                            .field-wrap
+                                label
+                                    | Location
+                                    span.req *
+                                input(type='text', required='', autocomplete='off')
+                        .top-row
+                            .field-wrap
+                                label
+                                    | Price
+                                    span.req *
+                                input(type='text', required='', autocomplete='off')
+                            .field-wrap
+                                label
+                                    | quota
+                                    span.req *
+                                input(type='text', required='', autocomplete='off')
+                        .field-wrap(style='height:100px')
+                            textarea(placeholder='yo!describe~', required='', rows='4', cols='50')
+                        button.button.button-block(type='submit') OKAY!
 
 
 

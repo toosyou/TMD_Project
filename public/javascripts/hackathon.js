@@ -19,11 +19,7 @@ jQuery(document).ready(function(){
             label = $this.prev('label');
 
         if (e.type === 'focus') {
-            if ($this.val() === '') {
-                label.removeClass('active highlight');
-            } else {
-                label.addClass('active highlight');
-            }
+            label.toggleClass('active highlight');
         } else if (e.type === 'blur') {
             if( $this.val() === '' ) {
                 label.removeClass('active highlight');
@@ -40,11 +36,15 @@ jQuery(document).ready(function(){
         }
 
     });
-    // Tip: avoid this ton of code using AniJS ;)
 
-    $('.Header_login').click(function(){
+//Form animation
+// Tip: avoid this ton of code using AniJS ;)
+
+    $('.Header_login_btn').click(function(){
         // the animation starts
         console.log("yo");
+        $('.Form_content').css('display', 'block');
+        $('.Form_content').toggleClass('.is-visible');
         $('.form').css('display','block');
         $('.form').toggleClass('fadeInUp Form_animated');
 
@@ -55,6 +55,26 @@ jQuery(document).ready(function(){
             $(e.target).removeClass('fadeInUp Form_animated');
 
         });
+    });
+    $('.Up_date').click(function(){
+        // the animation starts
+        console.log("yo");
+        $('.Up_content').css('display', 'block');
+        $('.Up_content').toggleClass('.is-visible');
+        $('.form').css('display','block');
+        $('.form').toggleClass('fadeInUp Form_animated');
+
+        // do something when animation ends
+        $('.form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+
+            // trick to execute the animation again
+            $(e.target).removeClass('fadeInUp Form_animated');
+
+        });
+    });
+    $('.Form_close').click(function(){
+        $('.Form_content').css('display','none');
+        $('.Up_content').css('display','none');
     });
 
 });
