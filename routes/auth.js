@@ -56,7 +56,7 @@ router.post('/login', function (req, res, next) {
 // Start the request
     request(options, function (error, response, body) {
         if (response.statusCode == 201) {
-            console.log(req.session);
+            req.session.token = response.headers["x-subject-token"];
             res.redirect('/');
         } else {
             res.send(response);
