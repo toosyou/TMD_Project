@@ -1,0 +1,413 @@
+/*--Reset--*/
+@font-face {
+        font-family:Woodcutter;
+        src: url(./Woodcutter.ttf);
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.box{
+	display: inline-block;
+}
+/*-- Reset end--*/
+
+
+/*-- Header --*/
+.Header{
+	width: 100%;
+	height: 100px;
+	background-image: linear-gradient(90deg, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
+	background-image: -moz-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
+	background-image: -webkit-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
+	background-image: -o-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
+	background-image: -ms-linear-gradient(left, rgb(52, 152, 219) 11%, rgb(46, 204, 113) 100%);
+	z-index: 2;
+	box-shadow: 10px 10px 5px #888888;
+}
+.Header_title{
+	padding-top: -20px;
+	padding-left: 20px; 
+	width: 350px;
+	border: 1px solid #847914;
+	
+}
+.Header_title p{
+	font-family: Woodcutter;
+	font-size: 95px;
+	color: aliceblue;
+}
+
+/*--   Header end -----*/
+
+
+.Content{
+	z-index: 1;
+	height: 100%;
+	background-color: azure;
+}
+/*-- Left Content --*/
+.Left_Content{
+	position: absolute;
+	width: 20%;
+	max-width: 300px;
+	height: 100%;
+	background-color: #4d5158;
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Jaldi", sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #a0f6aa;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  width: 90%;
+  margin: 2em auto 0;
+  font-size: 2.4rem;
+  color: #507b55;
+  font-weight: bold;
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+input {
+  font-family: "Jaldi", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.Act-menu {
+  width: 100%;
+  max-height: 700px;
+  max-width: 300px;
+  background: #4d5158;
+  overflow: auto;
+}
+.Act-menu ul {
+  /* by default hide all sub menus */
+  display: none;
+}
+.Act-menu li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.Act-menu input[type=checkbox] {
+  /* hide native checkbox */
+  position: absolute;
+  opacity: 0;
+}
+.Act-menu label, .Act-menu a {
+  position: relative;
+  display: block;
+  padding: 18px 18px 18px 64px;
+  background: #4d5158;
+  box-shadow: inset 0 -1px #555960;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+.no-touch .Act-menu label:hover, .no-touch .Act-menu a:hover {
+  background: #52565d;
+}
+.Act-menu label::before, .Act-menu label::after, .Act-menu a::after {
+  /* icons */
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.Act-menu label {
+  cursor: pointer;
+}
+.Act-menu label::before, .Act-menu label::after {
+  background-image: url(./cd-icons.svg);
+  background-repeat: no-repeat;
+}
+.Act-menu label::before {
+  /* arrow icon */
+  left: 18px;
+  background-position: 0 0;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+.Act-menu label::after {
+  /* folder icons */
+  left: 41px;
+  background-position: -16px 0;
+}
+.Act-menu a::after {
+  /* image icon */
+  left: 36px;
+  background: url(./cd-icons.svg) no-repeat -48px 0;
+}
+.Act-menu input[type=checkbox]:checked + label::before {
+  /* rotate arrow */
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.Act-menu input[type=checkbox]:checked + label::after {
+  /* show open folder icon if item is checked */
+  background-position: -32px 0;
+}
+.Act-menu input[type=checkbox]:checked + label + ul,
+.Act-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+  /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
+  /* show children when item is checked */
+  display: block;
+}
+.Act-menu ul label,
+.Act-menu ul a {
+  background: #35383d;
+  box-shadow: inset 0 -1px #41444a;
+  padding-left: 82px;
+}
+.no-touch .Act-menu ul label:hover, .no-touch
+.Act-menu ul a:hover {
+  background: #3c3f45;
+}
+.Act-menu-menu > li:last-of-type > label,
+.Act-menu-menu > li:last-of-type > a,
+.Act-menu-menu > li > ul > li:last-of-type label,
+.Act-menu-menu > li > ul > li:last-of-type a {
+  box-shadow: none;
+}
+.Act-menu ul label::before {
+  left: 36px;
+}
+.Act-menu ul label::after,
+.Act-menu ul a::after {
+  left: 59px;
+}
+.Act-menu ul ul label,
+.Act-menu ul ul a {
+  padding-left: 100px;
+}
+.Act-menu ul ul label::before {
+  left: 54px;
+}
+.Act-menu ul ul label::after,
+.Act-menu ul ul a::after {
+  left: 77px;
+}
+.Act-menu ul ul ul label,
+.Act-menu ul ul ul a {
+  padding-left: 118px;
+}
+.Act-menu ul ul ul label::before {
+  left: 72px;
+}
+.Act-menu ul ul ul label::after,
+.Act-menu ul ul ul a::after {
+  left: 95px;
+}
+@media only screen and (min-width: 600px) {
+  .Act-menu label, .Act-menu a {
+    padding: 24px 24px 24px 82px;
+    font-size: 1.9rem;
+  }
+  .Act-menu label::before {
+    left: 24px;
+  }
+  .Act-menu label::after {
+    left: 53px;
+  }
+  .Act-menu ul label,
+  .Act-menu ul a {
+    padding-left: 106px;
+  }
+  .Act-menu ul label::before {
+    left: 48px;
+  }
+  .Act-menu ul label::after,
+  .Act-menu ul a::after {
+    left: 77px;
+  }
+  .Act-menu ul ul label,
+  .Act-menu ul ul a {
+    padding-left: 130px;
+  }
+  .Act-menu ul ul label::before {
+    left: 72px;
+  }
+  .Act-menu ul ul label::after,
+  .Act-menu ul ul a::after {
+    left: 101px;
+  }
+  .Act-menu ul ul ul label,
+  .Act-menu ul ul ul a {
+    padding-left: 154px;
+  }
+  .Act-menu ul ul ul label::before {
+    left: 96px;
+  }
+  .Act-menu ul ul ul label::after,
+  .Act-menu ul ul ul a::after {
+    left: 125px;
+  }
+}
+.Act-menu.animated label::before {
+  /* this class is used if you're using jquery to animate the accordion */
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/*-- Left Content end --*/
+
+
+/*--- Right Content end --*/
+.Right_Content{
+	position: absolute;
+	width: 80%;
+	margin-left: 20%;
+	/*border: 3px solid red;*/
+	height: 100%;
+}
+
+/*--    Act_box ----*/
+.Act_box{
+	background: #fff;
+	width: 200px;
+	height: 300px;
+	border-radius: 4px;
+  	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	margin: 1em;
+	text-align: center;
+}
+.Box_container{
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s, color 3s;	
+}
+.Act_box .Box_img {
+  width: 200px;
+  height: 200px;
+  z-index: 2px;
+  overflow: hidden;
+}
+.Act_box .Box_img img {
+  width: 200px;
+  height: 200px;
+  z-index: 2px;
+}
+.Act_box h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  padding: 0;
+  color: #dd5555;
+}
+.Act_box p {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #7d7d7d;
+  padding: 0;
+}
+.Act_box button{
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #dd5555;
+  padding: 0 45px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+.Box_des{
+	border: 1px solid rgba(90, 86, 86, 0.5);
+	width: 150px;
+	height: 150px;
+	margin: 50 auto;
+	padding: 20px 10px 20px 10px;
+	border-radius: 3px;
+}
+.Box_info{
+	z-index:1px;
+	width: 200px;
+	height: 400px;
+}
+.Box_container:hover{
+	transform: translate3d(0,-95%,0);	
+}
+/*---    Act_Box end ---*/
