@@ -40,5 +40,21 @@ jQuery(document).ready(function(){
         }
 
     });
+    // Tip: avoid this ton of code using AniJS ;)
+
+    $('.Header_login').click(function(){
+        // the animation starts
+        console.log("yo");
+        $('.form').css('display','block');
+        $('.form').toggleClass('fadeInUp Form_animated');
+
+        // do something when animation ends
+        $('.form').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+
+            // trick to execute the animation again
+            $(e.target).removeClass('fadeInUp Form_animated');
+
+        });
+    });
 
 });
