@@ -7,23 +7,6 @@ var router = express.Router();
 
 /* GET home page. */
 
-router.get('/login', function(req, res, next) {
-
-
-    var options = {
-        url: 'http://hackathon.promise.com.tw/fileop/v1/metadata/',
-        method: 'GET',
-        headers: {
-            'User-Agent': req.session.header,
-            'X-Auth-Token': req.session.token
-        }
-    };
-    request(options, function (error, response, body) {
-        res.send(response);
-    });
-
-});
-
 router.post('/login', function (req, res, next) {
 
     var username = req.body.username;
@@ -71,11 +54,27 @@ router.post('/login', function (req, res, next) {
             req.session.password = req.body.passwd;
             req.session.header = req.body.username + '.User.Portal';
             req.session.domain = req.body.domain;
-            res.redirect('/');
+
+
+            var options = {
+                url: 'http://hackathon.promise.com.tw/fileop/v1/metadata/',
+                method: 'GET',
+                headers: {
+                    'User-Agent': req.session.header,
+                    'X-Auth-Token': req.session.token
+                }
+            };
+            request(options, function (error, response, body) {
+                req.session.path = JSON.parse(body).contents;
+                console.log(req.session.path);
+                res.redirect('/');
+            });
+
         } else {
             res.send(response);
         }
     });
+
 
 });
 
