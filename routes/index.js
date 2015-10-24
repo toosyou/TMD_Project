@@ -6,7 +6,9 @@ router.get('/', function (req, res, next) {
 
     res.render('index', {
         title: 'NCTU Act',
-        token: req.session.token
+        token: req.session.token,
+        login: req.session.token !== undefined,
+        path: req.session.path
     });
 });
 

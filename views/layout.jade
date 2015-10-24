@@ -12,8 +12,10 @@ html
         .Header
             .Header_title
                 p NCTU Act!
-            .Header_login
-                button() Login
+            if !login
+                .Header_login
+                    button() Login
+
 
         block content
 
