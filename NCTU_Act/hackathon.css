@@ -125,7 +125,7 @@ background-image: -ms-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 1
 	padding-left: 20px; 
 	width: 350px;
 	height: 90px;
-	font-size: 80px;
+	font-size: 70px;
 	letter-spacing: 0.1px;
 	margin-top: -15px;
 }
@@ -146,8 +146,9 @@ background-image: -ms-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 1
 /*-- Left Content --*/
 .Left_Content{
 	position: absolute;
-	width: 40%;
-	max-width: 300px;
+	width: 35%;
+	max-width: 350px;
+	min-width: 150px;
 	height: 100%;
 	background-color: #4d5158;
 }
@@ -347,8 +348,8 @@ Main Components
 /*--- Right Content end --*/
 .Right_Content{
 	position: absolute;
-	width: 60%;
-	margin-left: 40%;
+	width: 65%;
+	margin-left: 35%;
 	/*border: 3px solid red;*/
 	height: 100%;
 }
@@ -358,7 +359,8 @@ Main Components
     position: relative;
     display: block;	
 	background: #fff;
-	border:1px solid black;
+	border-top:1px solid black;
+	border-bottom: 1px solid black;
 	width:100%;
 	height: 100px;
   	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
@@ -409,7 +411,7 @@ Main Components
 	border: 1px solid rgba(90, 86, 86, 0.5);
 	width: 150px;
 	height: 150px;
-	margin: 50 auto;
+	margin: 50px auto;
 	padding: 20px 10px 20px 10px;
 	border-radius: 3px;
 }
@@ -581,22 +583,23 @@ input:focus, textarea:focus {
 
 
 
-/*---    Login Form end ---*/
+/*--- Login Form end ---*/
 
 /*--- Login Button ---*/
 .Header_login{
 	position: absolute;
 	top:10px;
-	left: 75%;
-	height: 50px;
+    float:right;
+	height:50px;
+	weight:40px;
 }
 .Header_login button{
   background: rgba(0,0,0,0);
   color:#fff;
   border:none;
   height:50px;
-  weight:50px;
-  font-size:20px;
+  weight:40px;
+  font-size:16px;
   border-radius: 5px;
   padding: 0 20px;
   cursor:pointer;
@@ -932,7 +935,7 @@ Main Components
 	border: 1px solid rgba(90, 86, 86, 0.5);
 	width: 150px;
 	height: 150px;
-	margin: 50 auto;
+	margin: 50px auto;
 	padding: 20px 10px 20px 10px;
 	border-radius: 3px;
 }
@@ -948,6 +951,9 @@ Main Components
 
 /*---    Login Form  ---*/
 .form {
+  position: absolute;
+  left: 40%;
+  top:200px;
   background-color: #4d5158;
   padding: 40px;
   max-width: 600px;
@@ -1101,8 +1107,52 @@ input:focus, textarea:focus {
   display: block;
   width: 100%;
 }
-
-
+/*base code*/
+.Form_animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.Form_animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.Form_animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+/*the animation definition*/
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp
+}
 
 /*---    Login Form end ---*/
 
@@ -1130,26 +1180,5 @@ input:focus, textarea:focus {
   background:#fff;
   color:#1AAB8A;
 }
-/*.Header_login button:before,.Header_login button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #1AAB8A;
-  transition:400ms ease all;
-}
-.Header_login button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.Header_login button:hover:before,.Header_login button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}*/
-
 /*--- Login Button end ---*/
 }
