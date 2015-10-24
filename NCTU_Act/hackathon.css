@@ -635,7 +635,6 @@ input:focus, textarea:focus {
 }
 
 @media(min-width:769px){
-
 /*-- Header --*/
 .Header{
 	width: 100%;
@@ -942,7 +941,7 @@ Main Components
 .Box_info{
 	z-index:1px;
 	width: 200px;
-	height: 400px;
+	height: 300px;	
 }
 .Box_container:hover{
 	transform: translate3d(0,-95%,0);	
@@ -950,13 +949,36 @@ Main Components
 /*---    Act_Box end ---*/
 
 /*---    Login Form  ---*/
+.Form_content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 54, 66, 0.8);
+  z-index: 3;
+  overflow-y: auto;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
+  -moz-transition: opacity 0.3s 0, visibility 0 0.3s;
+  transition: opacity 0.3s 0, visibility 0 0.3s;
+}
+.Form_content.is-visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s 0, visibility 0 0;
+  -moz-transition: opacity 0.3s 0, visibility 0 0;
+  transition: opacity 0.3s 0, visibility 0 0;
+}		
 .form {
   position: absolute;
-  left: 40%;
-  top:150px;
+  left: 35%;
+  top:100px;
   background-color: #4d5158;
   padding: 40px;
-  max-width: 600px;
+  width: 400px;
   margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
