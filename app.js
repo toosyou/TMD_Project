@@ -6,13 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session      = require('express-session');
 var passport = require('passport');
-
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var auth = require('./routes/auth');
 
 
 var app = express();
+
+
+mongoose.connect( 'mongodb://localhost/local');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
