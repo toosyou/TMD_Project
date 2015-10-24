@@ -1,0 +1,43 @@
+{
+    "countries":[
+        {
+            "name":"Taiwan",
+            "areas":[
+                {
+                    "name":"Hsinchu",
+                    "organizations":[
+                        {
+                            "name":"NCTU"
+                        }
+                    ]
+                },
+                {
+                    "name":"Kaoshiung",
+                    "organizations":[
+                    ]
+                },
+                {
+                    "name":"Taipei",
+                    "organizations":[
+                    ]
+                },
+                {
+                    "name":"Yilan",
+                    "organizations":[
+                    ]
+                },
+                {
+                    "name":"Taichung",
+                    "organizations":[
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"US",
+            "areas":[
+            ]
+        }
+
+    ]
+}
