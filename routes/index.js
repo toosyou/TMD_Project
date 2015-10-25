@@ -40,33 +40,78 @@ obj = {
                     organizations:[
                         {
                             name:"NCTU"
+                        },
+                        {
+                            name:"NTHU"
+                        },
+                        {
+                            name:"9dorm322"
                         }
                     ]
                 },
                 {
                     name:"Kaoshiung",
                     organizations:[
+                        {
+                            name:"KMT"
+                        }
                     ]
                 },
                 {
                     name:"Taipei",
                     "organizations":[
+                        {
+                            name:"NTU"
+                        },
+                        {
+                            name:"Taipei101"
+                        },
+                        {
+                            name:"station"
+                        }
                     ]
                 },
                 {
                     name:"Yilan",
                     organizations:[
+                        {
+                            name:"Yilan101"
+                        },
+                        {
+                            name:"Yilan202"
+                        }
                     ]
                 },
                 {
                     name:"Taichung",
                     organizations:[
+                        {
+                            name:"my_home"
+                        },
+                        {
+                            name:"BinLaDon"
+                        }
                     ]
                 }
             ]
         },
         {
             name:"US",
+            areas:[
+            ]
+        },
+        {
+            name:"zimbaja",
+            areas:[
+            ]
+        },
+        {
+            name:"EaZy",
+            areas:[
+            ]
+        },
+        {
+            name:"ChiChi",
             areas:[
             ]
         }

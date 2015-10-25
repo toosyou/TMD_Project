@@ -77,4 +77,44 @@ jQuery(document).ready(function(){
         $('.Up_content').css('display','none');
     });
 
+
+
+
+    $('.Form_close').click(function(){
+        $('.Form_content').css('display','none');
+        $('.Up_content').css('display','none');
+    });
+
+
+
+
+    /*--------  Show Info   ----------*/
+    $('.Box_info').click(function(){
+        // the animation starts
+        var c = $(this).attr('class');
+        c = c.split(" ")[1];
+        console.log(c);
+        $('.Show_contain'+'.'+c).css('display', 'block');
+        $('.Show_contain'+'.'+c).toggleClass('.is-visible');
+    });
 });
+var element = $('.Show_des');
+
+// when mouseover execute the animation
+element.mouseover(function(){
+
+    // the animation starts
+    element.addClass('fadeInRight Show_animated');
+
+    // do something when animation ends
+    element.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e){
+
+        // trick to execute the animation again
+    });
+
+});
+
+$('.fa-times').click(function(){
+    $('.Show_contain').css('display','none');
+});	
+
