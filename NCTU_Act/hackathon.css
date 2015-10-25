@@ -1538,3 +1538,22 @@ input:focus, textarea:focus {
     border-width: 0;
   }
 }
+
+/*---    Upload File ----*/
+
+/*---  upload File end  ---*/
+.myFile {
+  position: relative;
+  overflow: hidden;
+}
+.myFile input[type="file"] {
+  display: block;
+  position: absolute;
+  z-index: 5px;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  font-size: 100px;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
