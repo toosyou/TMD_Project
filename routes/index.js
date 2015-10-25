@@ -133,9 +133,9 @@ router.get('/', function (req, res, next) {
 
 router.get('/:filter', function (req, res, next) {
     //console.log(req.body);
-    event.find({$or: [{organization: req.params.filter}, {area: req.params.filter}, {country: req.params.filter}]}).limit(8).exec(function (err, result) {
+    event.findRandom({$or: [{organization: req.params.filter}, {area: req.params.filter}, {country: req.params.filter}]}, {}, {limit:8},function (err, result) {
         res.render('box', {
-            data: result,
+            data: result
         });
     });
 });
