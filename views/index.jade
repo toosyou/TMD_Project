@@ -11,13 +11,13 @@ block content
                         if p.areas.length != 0
                             ul
                                 each a in p.areas
-                                    li.has-children(onclick='filter(areas,#{a.name})')
+                                    li.has-children
                                         input(type='checkbox', name='#{a.name}',id='#{a.name}')
                                         label(for='#{a.name}')= a.name
                                         if a.organizations.length != 0
                                             ul
                                                 each o in a.organizations
-                                                    li(onclick='filter(orgs,#{o.name})')
+                                                    li
                                                         input(type='checkbox', name='#{o.name}',id='#{o.name}')
                                                         label(for='#{o.name}')= o.name
 
@@ -50,10 +50,10 @@ block content
             .Show_contain.is-visible(class='#{d.name}')
                 .Show
                     .Left_show.box
-                        //if d.img_scr
-                        //     img.box_img(src='#{d.img_scr}')
-                        //else
-                        img.box_img(src='/images/Unknown.jpeg')
+                        if d.img_scr
+                             img.box_img(src='#{d.img_scr}')
+                        else
+                            img.box_img(src='/images/Unknown.jpeg')
                         .Show_title
                             p #{d.title} #{d.location}
                     .Right_show.box
