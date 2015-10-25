@@ -1,10 +1,10 @@
-2015 梅竹黑客松x喬鼎科技
+## Geek Things™ᴰ
 
-隊名：Geek Things™ᴰ
+2015 梅竹黑客松x喬鼎科技
 
 蔡明娟 x 林立秦 x 簡聃 x 張逸群
 
-作品名字：International Activity Page
+## International Activity Page
 
 多次找不到自己想要的活動嗎？
 
@@ -19,3 +19,10 @@ International Activity Page 網羅全世界的所有活動，
 International Activity Page 讓你抓到自己想要的活動，
 
 一起成為活動王吧！
+
+### Feature
+
+* 可以參加活動啊，爽啊
+* 可以知道別人參加了什麼活動啊，爽啊
+* 黑客松的buffet 很好吃啊，爽啊
+* 張逸群都在耍廢，爽啊
