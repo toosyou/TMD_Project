@@ -26,12 +26,12 @@
 <div class="Content">
 	<div class="Left_Content box">
 		<ul class="Act-menu animated">
-			<li class="has-children">
+			<li class="has-children" onclick="find('Country')">
 				<input type="checkbox" name ="group-1" id="group-1">
 				<label for="group-1">台灣</label>
 
 				<ul>
-					<li class="has-children">
+					<li class="has-children" onclick="find('Region')">
 						<input type="checkbox" name ="sub-group-1" id="sub-group-1">
 						<label for="sub-group-1">Sub Group 1</label>
 
@@ -114,10 +114,9 @@
 			<button class="up_date_btn">Update</button>
 		</div>
 	</div>
-	<div class="Right_Content box">
+	<div class="Right_Content box">		
 		
-		
-		<div class="Act_box">
+		<div class="Act_box fadeIn Show_animated">
 			<div class="Box_container">
 			  <div class="Box_img">
 				<img class="box_img" src="imgres.jpg">
@@ -138,7 +137,7 @@
 			  </div>
 			</div>	
 		 </div>
-				<div class="Act_box">
+				<div class="Act_box fadeIn Show_animated">
 			<div class="Box_container">
 			  <div class="Box_img">
 				<img class="box_img" src="images.jpeg">
@@ -159,7 +158,7 @@
 			  </div>
 			</div>	
 		 </div>
-				<div class="Act_box">
+				<div class="Act_box fadeIn Show_animated">
 			<div class="Box_container">
 			  <div class="Box_img">
 				<img class="box_img" src="imgres.jpg">
@@ -180,10 +179,10 @@
 			  </div>
 			</div>	
 		 </div>
-				<div class="Act_box">
+				<div class="Act_box fadeIn Show_animated">
 			<div class="Box_container">
 			  <div class="Box_img">
-				<img class="box_img" src="../public/images/Unknown.jpeg">
+				<img class="box_img" src="Unknown.jpeg">
 			  </div>
 			  <div class="Box_info">
 				  
@@ -201,10 +200,10 @@
 			  </div>
 			</div>	
 		 </div>
-		<div class="Act_box">
+		<div class="Act_box fadeIn Show_animated">
 			<div class="Box_container">
 			  <div class="Box_img">
-				<img class="box_img" src="../public/images/Unknown.jpeg">
+				<img class="box_img" src="Unknown.jpeg">
 			  </div>
 			  <div class="Box_info">
 				  
@@ -213,7 +212,7 @@
 				<p> 新竹市,東區</p>	  	  
 				
 			    
-				<div class="Box_des">	  
+				<div class="Box_des fadeInRight Show_animated">	  
 				  <p>幹我他們的<br>就是簡述啊<br>不會ＪＳ啊，幹想要去<br>吃麥當勞喔</p>
 				</div>
 				  
@@ -222,7 +221,7 @@
 			  </div>
 			</div>	
 		 </div>
-		<div class="Act_box">
+		<div class="Act_box fadeIn Show_animated">
 			<div class="Box_container">
 			  <div class="Box_img">
 				<img class="box_img" src="images.jpeg">
@@ -243,7 +242,13 @@
 			  </div>
 			</div>	
 		 </div>		
-</div>
+		<div class="Loading_contain is-visible">
+			<div class="Fucking">
+				<div class="loading"></div>
+			</div>
+		</div>
+
+	</div>
 <div class="footer">
 <div class="Show_contain is-visible">  	
 <div class="Show">
@@ -288,7 +293,7 @@
 </div>
 </div>	
 <div class="Form_content is-visible">	
-    <div class="Form">
+    <div class="Form fadeIn Show_animated">
       <div class="tab-content">
         <div id="signup">   
           <h1>登入</h1>
@@ -327,7 +332,7 @@
 	</div>
 </div>		
 <div class="Up_content is-visible">	
-    <div class="Up Form">
+    <div class="Up Form fadeIn Show_animated">
       <div class="tab-content">
         <div id="signup">   
           <h1>上傳</h1>

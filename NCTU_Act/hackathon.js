@@ -116,3 +116,12 @@ $('.fa-times').click(function(){
 	$('.Show_contain').css('display','none');
 });	
 
+$('.Act-menu').click(function(){
+	$('.Loading_contain').css('display','block');
+	$('.Loading_contain').addClass('is-visible');
+		var explode = function(){
+		  $('.Loading_contain').removeClass('.is-visible');
+		  $('.Loading_contain').css('display','none');
+		};
+		setTimeout(explode, 3000);
+});	

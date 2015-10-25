@@ -111,7 +111,7 @@ table {
 .Header{
 	width: 100%;
 	height: 90px;
-	background: #EF9A9A;
+	background: #fcc0c0;
 	/*background-image: linear-gradient(90deg, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
 background-image: -moz-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
 background-image: -webkit-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
@@ -639,7 +639,7 @@ input:focus, textarea:focus {
 .Header{
 	width: 100%;
 	height: 115px;
-	background: #EF9A9A;
+	background: #ffa9a9;
 	/*background-image: linear-gradient(90deg, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
 background-image: -moz-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
 background-image: -webkit-linear-gradient(left, rgb(52, 152, 219) 0%, rgb(46, 204, 113) 100%);
@@ -1213,36 +1213,26 @@ input:focus, textarea:focus {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
-/*the animation definition*/
-@-webkit-keyframes fadeInUp {
+	
+@-webkit-keyframes fadeIn {
   0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0)
+    opacity: 0
   }
   100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none
+    opacity: 1
   }
 }
-@keyframes fadeInUp {
+@keyframes fadeIn {
   0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    -ms-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0)
+    opacity: 0
   }
   100% {
-    opacity: 1;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none
+    opacity: 1
   }
 }
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn
 }
 
 /*---    Login Form end ---*/
@@ -1490,4 +1480,61 @@ input:focus, textarea:focus {
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight
+}
+.Loading_contain{
+   display: none;
+  z-index:5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 54, 66, 0.95);
+  overflow-y: auto;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
+  -moz-transition: opacity 0.3s 0, visibility 0 0.3s;
+  transition: opacity 0.3s 0, visibility 0 0.3s;
+}
+.Loading_contain.is-visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s 0, visibility 0 0;
+  -moz-transition: opacity 0.3s 0, visibility 0 0;
+  transition: opacity 0.3s 0, visibility 0 0;
+}
+.loading{
+  width: 100px;
+  height: 100px;
+  top:30%;
+  left: 40%;
+  background: #ff5954;
+  border-radius: 50%;
+  display: flex;
+
+}
+.Fucking{
+	padding: 300px 0 0 45%;
+}
+.loading:before{
+  content:'';
+  width: 0;
+  height: 0;
+  margin:auto;
+  border: 20px solid #fff;
+  border-radius: 50%;
+  animation:loading-ani1 1s infinite;
+}
+@keyframes loading-ani1{
+  70%{
+    width: 100px;
+    height: 100px;
+  }
+  100%{
+    width: 100px;
+    height: 100px;
+    border-width: 0;
+  }
 }
