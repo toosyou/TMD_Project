@@ -48,7 +48,7 @@ html
                             input(type='password', required='', autocomplete='off',name='password')
                         button.button.button-block(type='submit') Login
         
-        form.Up_content.is-visible
+        form.Up_content.is-visible(action='/update',method='post')
             .Up.Form.form
                 .tab-content
                     #signup
@@ -59,42 +59,42 @@ html
                         .field-wrap
                             label Title
                                 span.req *
-                            input(type='text', required='', autocomplete='off')
+                            input(type='text', required='', autocomplete='off',name='title')
                         .top-row
                             .field-wrap
                                 label
                                     | Time
                                     span.req *
-                                input(type='text', required='', autocomplete='off')
+                                input(type='text', required='', autocomplete='off',name='time')
                             .field-wrap
                                 label
                                     | Date
                                     span.req *
-                                input(type='text', required='', autocomplete='off')
+                                input(type='text', required='', autocomplete='off',name='date')
                         .top-row
                             .field-wrap
                                 label
                                     | Host
                                     span.req *
-                                input(type='text', required='', autocomplete='off')
+                                input(type='text', required='', autocomplete='off',name='host')
                             .field-wrap
                                 label
                                     | Location
                                     span.req *
-                                input(type='text', required='', autocomplete='off')
+                                input(type='text', required='', autocomplete='off',name='location')
                         .top-row
                             .field-wrap
                                 label
                                     | Price
                                     span.req *
-                                input(type='text', required='', autocomplete='off')
+                                input(type='text', required='', autocomplete='off',name='price')
                             .field-wrap
                                 label
                                     | quota
                                     span.req *
-                                input(type='text', required='', autocomplete='off')
+                                input(type='text', required='', autocomplete='off',name='quota')
                         .field-wrap(style='height:100px')
-                            textarea(placeholder='yo!describe~', required='', rows='4', cols='50')
+                            textarea(placeholder='yo!describe~', required='', rows='4', cols='50',name='des')
                         button.button.button-block(type='submit') OKAY!
 
 

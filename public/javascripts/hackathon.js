@@ -8,7 +8,17 @@ jQuery(document).ready(function(){
             //detect change in the input[type="checkbox"] value
             accordion.on('change', 'input[type="checkbox"]', function(){
                 var checkbox = $(this);
-                console.log(checkbox.prop('checked'));
+                console.log(checkbox);
+                if (checkbox[0].checked) {
+                    var filter = checkbox.attr('id');
+                    $.ajax({
+                        url: '/' + filter,
+                        type: 'GET',
+                        success(response) {
+                            $('.Right_Content.box').html(response);
+                        }
+                    })
+                }
                 ( checkbox.prop('checked') ) ? checkbox.siblings('ul').attr('style', 'display:none;').slideDown(300) : checkbox.siblings('ul').attr('style', 'display:block;').slideUp(300);
             });
         });
@@ -93,7 +103,6 @@ jQuery(document).ready(function(){
         // the animation starts
         var c = $(this).attr('class');
         c = c.split(" ")[1];
-        console.log(c);
         $('.Show_contain'+'.'+c).css('display', 'block');
         $('.Show_contain'+'.'+c).toggleClass('.is-visible');
     });

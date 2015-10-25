@@ -5,7 +5,7 @@ var fs = require('fs');
 
 
 var mongoose = require('mongoose');
-var Schema   = mongoose.Schema;
+var Schema = mongoose.Schema;
 var random = require('mongoose-simple-random');
 var Event = new Schema({
         name: String,
@@ -23,99 +23,95 @@ var Event = new Schema({
         quota: Number,
         detail: String,
         tags: [
-                {
-                    name: String
-                }
-            ]
+            {
+                name: String
+            }
+        ]
     }
 );
 Event.plugin(random);
 var event = mongoose.model('event', Event);
 
 obj = {
-    countries:[
+    countries: [
         {
-            name:"Taiwan",
-            areas:[
+            name: "Taiwan",
+            area: [
                 {
-                    name:"Hsinchu",
-                    organizations:[
+                    name: "Hsinchu",
+                    organization: [
                         {
-                            name:"NCTU"
+                            name: "NCTU"
                         },
                         {
-                            name:"NTHU"
+                            name: "NTHU"
                         },
                         {
-                            name:"9dorm322"
+                            name: "9dorm322"
                         }
                     ]
                 },
                 {
-                    name:"Kaoshiung",
-                    organizations:[
+                    name: "Kaoshiung",
+                    organization: [
                         {
-                            name:"KMT"
+                            name: "KMT"
                         }
                     ]
                 },
                 {
-                    name:"Taipei",
-                    "organizations":[
+                    name: "Taipei",
+                    "organization": [
                         {
-                            name:"NTU"
+                            name: "NTU"
                         },
                         {
-                            name:"Taipei101"
+                            name: "Taipei101"
                         },
                         {
-                            name:"station"
+                            name: "station"
                         }
                     ]
                 },
                 {
-                    name:"Yilan",
-                    organizations:[
+                    name: "Yilan",
+                    organization: [
                         {
-                            name:"Yilan101"
+                            name: "Yilan101"
                         },
                         {
-                            name:"Yilan202"
+                            name: "Yilan202"
                         }
                     ]
                 },
                 {
-                    name:"Taichung",
-                    organizations:[
+                    name: "Taichung",
+                    organization: [
                         {
-                            name:"my_home"
+                            name: "my_home"
                         },
                         {
-                            name:"BinLaDon"
+                            name: "BinLaDon"
                         }
                     ]
                 }
             ]
         },
         {
-            name:"US",
-            areas:[
-            ]
+            name: "US",
+            area: []
         },
         {
-            name:"zimbaja",
-            areas:[
-            ]
+            name: "zimbaja",
+            area: []
         },
         {
-            name:"EaZy",
-            areas:[
-            ]
+            name: "EaZy",
+            area: []
         },
         {
-            name:"ChiChi",
-            areas:[
-            ]
+            name: "ChiChi",
+            area: []
         }
 
     ]
@@ -123,7 +119,7 @@ obj = {
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    event.findRandom({}, {}, {limit: 8}, function(err, result) {
+    event.findRandom({}, {}, {limit: 8}, function (err, result) {
         res.render('index', {
             title: 'NCTU Act',
             token: '',
@@ -135,39 +131,58 @@ router.get('/', function (req, res, next) {
     });
 });
 
-//router.get('/:filter', function (req, res, next) {
-//    console.log(req.params);
-//    event.find({}).limit(8).exec(function (err, result) {
-//        res.send(result);
-//    });
-//});
+router.get('/:filter', function (req, res, next) {
+    //console.log(req.body);
+    event.findRandom({$or: [{organization: req.params.filter}, {area: req.params.filter}, {country: req.params.filter}]}, {}, {limit:8},function (err, result) {
+        res.render('box', {
+            data: result
+        });
+    });
+});
 
 router.get('/upload', function (req, res, next) {
     var time = Date.now();
-    var f = fs.readFileSync('auth.js');
-    var options = {
-        url: 'http://hackathon.promise.com.tw/fileop/v1/files/',
-        method: 'GET',
-        headers: {
-            'X-Auth-Token' : req.session.token,
-            'User-Agent': req.session.header,
-            'X-Meta-FC-Compress': false,
-            'X-Meta-FC-Encrypt': false,
-            'X-Meta-FC-Mtime': time+"#"+time+"#"+time
-        },
-        postData: {
-            params: {
-                overite: true
-            }
-        },
-        body: f
-    };
-    request(options, function (err, response, body) {
-        console.log(response);
-        res.redirect('/');
-    })
+    fs.readFile('./app.js', function (err, data) {
+        var options = {
+            url: 'http://hackathon.promise.com.tw/fileop/v1/files_put/' + 'app.js',
+            method: 'PUT',
+            headers: {
+                'X-Auth-Token': req.session.token,
+                'User-Agent': req.session.header,
+                'X-Meta-FC-Compress': false,
+                'X-Meta-FC-Encrypt': false,
+                'X-Meta-FC-Mtime': time + "#" + time + "#" + time
+            },
+            postData: {
+                params: {
+                    overite: true
+                }
+            },
+            body: data
+        };
+        request(options, function (err, response, body) {
+            //console.log(body);
+            res.redirect('/');
+        })
+    });
 });
 
+router.post('/update', function (req, res, next) {
+    new event({
+        country: 'ChiChi',
+        title: req.body.title,
+        time: req.body.time,
+        date: req.body.date,
+        host: req.body.host,
+        location: req.body.location,
+        price: req.body.price,
+        quota: req.body.quota,
+        detail: req.body.des
+    }).save(function (err, data) {
+        console.log(data);
+        res.redirect('/')
+    });
+});
 
 
 module.exports = router;

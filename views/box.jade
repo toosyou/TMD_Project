@@ -1,0 +1,51 @@
+//
+   Created by Daniel on 2015/10/25.
+script(src='/javascripts/hackathon.js')
+each d in data
+    .Act_box.fadeIn.Show_animated
+        .Box_container
+            .Box_img
+                if d.img_scr
+                    img.box_img(src='#{d.img_scr}')
+                else
+                    img.box_img(src='/images/Unknown.jpeg')
+            .Box_info(class='#{d.name}')
+                h3= d.title
+                p= d.date
+                p= d.location
+                p= d.host
+                .Box_des
+                    p= d.detail
+                button 詳細資料
+each d in data
+    .Show_contain.is-visible(class='#{d.name}')
+        .Show
+            .Left_show.box
+                if d.img_scr
+                    img.box_img(src='#{d.img_scr}')
+                else
+                    img.box_img(src='/images/Unknown.jpeg')
+                .Show_title
+                    p #{d.title} #{d.location}
+            .Right_show.box
+                i.fa.fa-times.fa-2x
+                .Show_time
+                    i.fadeInRight.Show_animated.fa.fa-calendar.fa-2x
+                    .Time
+                        p 時間#{d.date}
+                .Show_info
+                    i.fadeInRight.Show_animated.fa.fa-users.fa-2x
+                    i.fadeInRight.Show_animated.fa.fa-usd.fa-2x
+                    .People
+                        p #{d.quota}人
+                    .Money
+                        p 新台幣#{d.price}元
+                .Show_host
+                    i.fadeInRight.Show_animated.fa.fa-hand-peace-o.fa-2x
+                    i.fadeInRight.Show_animated.fa.fa-user-secret.fa-2x
+                    .Host
+                        p 時間:#{d.time}
+                    .Sponsor
+                        p 贊助:#{d.sponsor}
+                .fadeInRight.Show_animated.Show_des
+                    p= d.detail
